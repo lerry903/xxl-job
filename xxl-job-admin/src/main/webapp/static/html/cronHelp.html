@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <link rel="icon" href="../../favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Cron帮助</title>
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../adminlte/bootstrap/css/bootstrap.min.css">
+    <style type="text/css">
+        .box {
+            width: 100%;
+            height: 280px;
+            vertical-align: middle;
+            line-height: 280px;
+            padding: 60px 50px;
+            background: -webkit-linear-gradient(left top, rgb(21, 87, 153), rgb(21, 153, 87)); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(bottom right, rgb(21, 87, 153), rgb(21, 153, 87)); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(bottom right, rgb(21, 87, 153), rgb(21, 153, 87)); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to bottom right, rgb(21, 87, 153), rgb(21, 153, 87)); /* 标准的语法 */
+        }
+    </style>
+</head>
+<body>
+<section class="box text-center " style="color:#fff">
+    <h1>CRON</h1>
+    <h3>计划任务，是任务在约定的时间执行已经计划好的工作，这是表面的意思。在Linux中，我们经常用到 cron 服务器来完成这项工作。cron服务器可以根据配置文件约定的时间来执行特定的作务。</h3>
+</section>
+<section class="main-content" style="margin:20px 20%">
+    <table class="table table-striped table-bordered text-center">
+        <caption>基本的使用实例</caption>
+        <thead>
+        <tr>
+            <th>表达式</th>
+            <th>含义</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>0 0 12 * * ?</td>
+            <td>每天12点运行</td>
+        </tr>
+        <tr>
+            <td>0 15 10 ? * *</td>
+            <td>每天10:15运行</td>
+        </tr>
+        <tr>
+            <td>0 15 10 * * ? 2017</td>
+            <td>在2017年的每天10：15运行</td>
+        </tr>
+        <tr>
+            <td>0 * 14 * * ?</td>
+            <td>每天14点到15点之间每分钟运行一次，开始于14:00，结束于14:59。</td>
+        </tr>
+        <tr>
+            <td>0 0/5 14 * * ?</td>
+            <td>每天14点到15点每5分钟运行一次，开始于14:00，结束于14:55</td>
+        </tr>
+
+        <tr>
+            <td>0 10,44 14 ? 3 WED</td>
+            <td>3月每周三的14:10分到14:44，每分钟运行一次</td>
+        </tr>
+        <tr>
+            <td>0 15 10 ? * MON-FRI</td>
+            <td>每周一，二，三，四，五的10:15分运行</td>
+        </tr>
+        <tr>
+            <td>0 15 10 15 * ?</td>
+            <td>每月15日10:15分运行</td>
+        </tr>
+        <tr>
+            <td>0 15 10 L * ?</td>
+            <td>每月最后一天10:15分运行</td>
+        </tr>
+        <tr>
+            <td>0 15 10 ? * 6L</td>
+            <td>每月最后一个星期五10:15分运行</td>
+        </tr>
+        <tr>
+            <td>0 15 10 ? * 6L 2007-2009</td>
+            <td>在2007,2008,2009年每个月的最后一个星期五的10:15分运行</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
